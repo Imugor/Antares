@@ -1,0 +1,631 @@
+.vacancies {
+  &__vacancies-content {
+  }
+}
+.vacancies-content {
+  &__breadcrumb {
+    padding: 20px 0;
+  }
+
+  &__advantages {
+  }
+
+  &__vacancies-list {
+  }
+}
+.advantages {
+  &__title {
+    font-size: 40px;
+    margin: 0 0 69px 0;
+    @media (max-width: 420px) {
+      margin: 0 0 20px 0;
+      font-size: 20px;
+    }
+  }
+
+  &__text {
+    padding: 0 57px;
+    text-align: center;
+    font-size: 32px;
+    line-height: 1.4em;
+
+    @media (max-width: 420px) {
+      font-size: 14px;
+      padding: 0;
+    }
+  }
+
+  &__advantages-slider {
+  }
+}
+.advantages-slider {
+  position: relative;
+
+  .no-wrapper {
+    padding: 60px 0 95px;
+
+    @media (max-width: 420px) {
+      padding: 0;
+    }
+    &::after {
+      position: absolute;
+      z-index: -1;
+      content: "";
+      right: 0;
+      top: 0;
+      width: 245.169px;
+      height: 100%;
+      background-image: url(../img/back-advantage2.png);
+      background-repeat: no-repeat;
+      @media (max-width: 420px) {
+        top: 25%;
+        width: 94px;
+        height: 276px;
+        background-image: url(../img/mobila-back-advantage2.png);
+      }
+    }
+
+    &::before {
+      position: absolute;
+      z-index: -1;
+      content: "";
+      top: 0;
+      left: 0;
+      width: 358px;
+      height: 100%;
+      background-image: url(../img/back-advantage.png);
+      background-repeat: no-repeat;
+      @media (max-width: 420px) {
+        top: 15%;
+        width: 146px;
+        height: 297px;
+        background-image: url(../img/mobila-back-advantage.png);
+      }
+    }
+  }
+}
+.advantages-slider-content {
+  &__wrapper {
+  }
+
+  &__advantages-slide {
+  }
+}
+.advantages-slide {
+  display: flex;
+  flex-direction: column;
+  gap: 44px;
+  margin: 5px 0;
+
+  &:nth-child(odd) {
+    margin-top: 159px;
+    @media (max-width: 420px) {
+      position: relative;
+      margin-top: 0;
+
+
+
+      & .advantage:nth-child(even) {
+        position: relative;
+        left: 99%;
+        transform: translate(-100%, -35%);
+      }
+
+      & .advantage:nth-child(odd) {
+        position: relative;
+        transform: translate(0, 35%);
+      }
+
+    }
+  }
+
+  &:nth-child(even) {
+    margin-top: 159px;
+    @media (max-width: 420px) {
+      position: relative;
+      margin-top: 0;
+
+
+
+      & .advantage:nth-child(even) {
+        position: relative;
+        left: 99%;
+        transform: translate(-100%, -35%);
+      }
+
+      & .advantage:nth-child(odd) {
+        position: relative;
+        transform: translate(0, 35%);
+      }
+
+    }
+  }
+
+
+
+  &:nth-child(2) {
+    margin-top: 55px;
+  }
+
+  &:first-child {
+    margin-left: 2px;
+  }
+
+  &:last-child {
+    margin-right: 2px;
+  }
+
+  &__advantage {
+  }
+}
+.advantage {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 385px;
+  height: 209px;
+
+  border-radius: 10px;
+  background: #fff;
+
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.16);
+
+  text-align: center;
+
+  overflow: hidden;
+  @media (max-width: 420px) {
+    flex-direction: column;
+    gap: 10px;
+    max-width: 148px;
+    max-height: 144px;
+
+
+
+  }
+  &__img {
+    width: 184px;
+    height: 150px;
+
+    @media (max-width: 420px) {
+      width: 57px;
+      height: 61px;
+    //   transform: translate(-150%, 0);
+    }
+  }
+
+  &__text-content {
+  }
+
+  &__title {
+    margin-bottom: 10px;
+    font-family: Inter-bold;
+    font-size: 20px;
+
+    @media (max-width: 420px) {
+      font-size: 12px;
+    }
+  }
+
+  &__text {
+    font-size: 12px;
+    @media (max-width: 420px) {
+      font-size: 10px;
+    }
+  }
+}
+
+.vacancies-list {
+  position: relative;
+
+  .no-wrapper {
+    padding: 30px 0 30px 0;
+
+    &> .wrapper {
+    //   width: auto;
+    }
+
+
+    &::after {
+      position: absolute;
+      z-index: -2;
+      content: "";
+      right: 0;
+      bottom: 0;
+      width: 864px;
+      height: 1062px;
+      background-image: url(../img/sallary-back2.jpg);
+      background-repeat: no-repeat;
+      @media (max-width: 420px) {
+        content: none;
+      }
+    }
+
+    &::before {
+      position: absolute;
+      z-index: -1;
+      content: "";
+      bottom: 0;
+      left: 0;
+      width: 631px;
+      height: 1282px;
+      background-image: url(../img/sallary-back.jpg);
+      background-repeat: no-repeat;
+
+      @media (max-width: 420px) {
+        content: none;
+      }
+    }
+  }
+
+  &__title {
+    margin-bottom: 70px;
+    @media (max-width: 420px) {
+      margin-bottom: 20px;
+    }
+  }
+
+  &__vacancy {
+  }
+}
+.vacancy {
+  position: relative;
+  padding-bottom: 30px;
+  color: #ffffff;
+  overflow: hidden;
+
+  @media (max-width: 420px) {
+    font-size: 14px;
+  }
+
+
+
+  transition: all 1s ease;
+
+  &__main-content {
+    box-sizing: border-box;
+    padding: 32px 44px;
+    margin: 0 auto;
+    width: 99%;
+    background: #2f2f2f;
+    border-radius: 10px;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.16);
+
+    @media (max-width: 420px) {
+      padding: 10px 13px 20px 13px;
+    }
+  }
+
+  &__title {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 18px;
+    font-family: Inter-bold;
+    font-size: 32px;
+    line-height: 1.2em;
+
+    @media (max-width: 420px) {
+      display: flex;
+      align-items: center;
+      margin-bottom: 3px;
+      font-size: 18px;
+    }
+  }
+
+  &__button {
+
+    @media (min-width: 421px) {
+      &:hover .vacancy__button-center {
+        background-color: #2f2f2f;
+      }
+    }
+
+    @media (max-width: 420px) {
+      &:active .vacancy__button-center {
+        background-color: #2f2f2f;
+      }
+    }
+
+  }
+  &__button-center {
+    position: relative;
+    height: 20px;
+    width: 20px;
+    padding: 5px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: $red;
+    &::after,
+    &::before {
+      position: absolute;
+      top: 50%;
+      left: 0;
+      content: "";
+      width: 17px;
+      height: 5px;
+      background-color: #ffffff;
+      border-radius: 10px;
+      transform: translate(11px, -70%) rotate(45deg);
+      transition: all 1s ease;
+    }
+
+    &::after {
+      transform: translate(2px, -70%) rotate(-45deg);
+    }
+
+    &_visible {
+      &::after {
+        transform: translate(2px, -40%) rotate(45deg);
+      }
+      &::before {
+        transform: translate(11px, -40%) rotate(-45deg);
+      }
+    }
+  }
+
+  &__salary {
+    margin-bottom: 22px;
+    font-family: Inter-bold;
+    @media (max-width: 420px) {
+      padding: 0;
+      margin-bottom: 13px;
+      font-size: 16px;
+    }
+  }
+
+  &__text {
+  }
+
+  &__exp {
+    margin-bottom: 10px;
+  }
+
+  &__time {
+    margin-bottom: 10px;
+  }
+
+  &__vacancy-info {
+  }
+}
+.vacancy-info {
+  position: relative;
+  z-index: -1;
+  padding: 34px 44px 55px 44px;
+  margin: 0 0.5%;
+  visibility: hidden;
+  overflow: hidden;
+  height: 100%;
+  width: 99%;
+
+  box-sizing: border-box;
+
+  display: flex;
+  gap: 80px;
+
+  transform: translateY(-105%);
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  color: #000000;
+  background: #ffffff;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.16);
+  transition:
+    transform 1s ease,
+    visibility 0s ease 1s;
+  @media (max-width: 420px) {
+    flex-direction: column;
+    gap: 20px;
+    padding: 16px 13px;
+
+  }
+
+  &_visible {
+    visibility: visible;
+    transform: translateY(-10px);
+    height: 100%;
+    transition: transform 1s ease;
+  }
+
+  &__vacancy-requirements {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+  }
+
+  &__title {
+    font-family: Inter-medium;
+    font-size: 24px;
+
+    @media (max-width: 420px) {
+      font-size: 16px;
+    }
+  }
+
+  &__lebel {
+    position: relative;
+    padding-left: 16.5px;
+
+    font-size: 20px;
+
+
+    @media (max-width: 420px) {
+      padding: 3px 16.5px 3;
+      font-size: 14px;
+    }
+
+    &::before {
+      position: absolute;
+      content: "";
+
+      left: 0;
+      top: 50%;
+      width: 9px;
+      height: 9px;
+      transform: translateY(-50%);
+      border-radius: 50%;
+      background-color: $red;
+    }
+  }
+
+  &__vacancy-conditions {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+  }
+}
+
+.summary {
+  box-sizing: border-box;
+  width: 99%;
+  margin: 30px auto 60px auto;
+  padding: 45px 44px 32px 44px;
+  background-color: #ffffff;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.16);
+  text-align: center;
+
+  @media (max-width: 420px) {
+    box-shadow: none;
+    margin: 0;
+    padding: 20px 0 ;
+  }
+  &__title {
+    font-family: Inter-bold;
+    font-size: 32px;
+    @media (max-width: 420px) {
+    font-size: 18px;
+    }
+  }
+
+  &__text {
+    margin: 25px 0 45px 0;
+    font-size: 18px;
+    line-height: 1.4em;
+    @media (max-width: 420px) {
+      font-size: 16px;
+    }
+  }
+
+  &__summary-form {
+  }
+}
+.summary-form {
+  &__grid {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: repeat(6, 57px);
+    grid-template-areas:
+      "name name name second-name second-name second-name "
+      "phone phone email email vacancy vacancy"
+      "message message message message message message"
+      "message message message message message message"
+      "message message message message message message"
+      "license license license license submit submit";
+    gap: 27px 30px;
+
+    @media (max-width: 420px) {
+      grid-template-columns: repeat(1, 1fr);
+      grid-template-rows: repeat(9, 57px);
+
+      grid-template-areas:
+        "name"
+        "second-name"
+        "phone"
+        "email"
+        "vacancy"
+        "message"
+        "message"
+        "submit"
+        "license";
+    }
+  }
+
+  .inputbox {
+    &__error {
+      margin-top: 2px;
+      @media (max-width: 420px) {
+        font-size: 16px;
+      }
+    }
+  }
+
+  & input {
+    box-sizing: border-box;
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+    border: 1px solid black;
+    border-radius: 4px;
+    font-size: 18px;
+    line-height: 1.4em;
+    outline: none;
+
+    @media (max-width: 420px) {
+      font-size: 16px;
+      padding: 16px 20px;
+    }
+  }
+
+  &__name {
+    grid-area: name;
+  }
+
+  &__second-name {
+    grid-area: second-name;
+  }
+
+  &__phone {
+    grid-area: phone;
+  }
+
+  &__mail {
+    grid-area: email;
+  }
+
+  &__vacancy {
+    grid-area: vacancy;
+  }
+
+  &__message {
+    grid-area: message;
+    box-sizing: border-box;
+    width: 100%;
+    padding: 8px 20px;
+    border: 1px solid black;
+    border-radius: 4px;
+    resize: none;
+    outline: none;
+    font-family: Inter;
+    font-size: 18px;
+    line-height: 1.4em;
+  }
+
+  &__bottom-group {
+  }
+
+  &__agreement {
+    grid-area: license;
+    margin: auto 0;
+    line-height: 1.4em;
+    text-align: left;
+    @media (max-width: 420px) {
+      text-align: justify;
+    }
+    &_bold {
+      font-family: Inter-bold;
+    }
+
+    &_link {
+      display: inline;
+    }
+  }
+
+  & &__submit {
+    grid-area: submit;
+    padding: 0;
+    border: none;
+  }
+}
+.button {
+}

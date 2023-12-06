@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+   @@include('html/_head.html', {
+      'title': 'Статьи',
+      'description': '',
+      'keywords': '',
+      'robots': 'index, nofolow',
+      'generator': ''
+   })
+</head>
+<body>
+   @@include('html/_header.html')
+   <section class="stocks-list">
+      <div class="wrapper">
+         <div class="stocks-list__stocks-list-content stocks-list-content">
+            <div class="stocks-list-content__breadcrumb breadcrumb">
+                @@include('html/_breadcrumbs.html')
+            </div>
+            <h2 class="stocks-list-content__title title">Акции</h2>
+            <div class="stocks-list-content__stocks-cells stocks-cells">
+               <div class="stocks-cells__stocks-cell stocks-cell">
+                  <img src="@img/stocks-list1.jpg" alt="" class="stocks-cell__img">
+                  <p class="stocks-cell__time">
+                     <span>12 октября 2023</span> <span>-</span> <span>13 октября 2023</span>
+                  </p>
+                  <h3 class="stocks-cell__text">При покупке на сайте <span class="stocks-cell__text_bold">Скидка 35%</span> на весь ассортимент</h3>
+               </div>
+               <div class="stocks-cells__stocks-cell stocks-cell">
+                  <img src="@img/stocks-list1.jpg" alt="" class="stocks-cell__img">
+                  <p class="stocks-cell__time">
+                     <span>12 октября 2023</span> <span>-</span> <span>13 октября 2023</span>
+                  </p>
+                  <h3 class="stocks-cell__text">При покупке на сайте <span class="stocks-cell__text_bold">Скидка 35%</span> на весь ассортимент</h3>
+               </div>
+               <div class="stocks-cells__stocks-cell stocks-cell">
+                  <img src="@img/stocks-list1.jpg" alt="" class="stocks-cell__img">
+                  <p class="stocks-cell__time">
+                     <span>12 октября 2023</span> <span>-</span> <span>13 октября 2023</span>
+                  </p>
+                  <h3 class="stocks-cell__text">При покупке на сайте <span class="stocks-cell__text_bold">Скидка 35%</span> на весь ассортимент</h3>
+               </div>
+            </div>
+         </div>
+      </div>
+   </section>
+   @@include('html/_footer.html')
+   <script src="js/DOMLoaded.js"></script>
+   <script defer src="js/script.js"></script>
+</body>
+</html>

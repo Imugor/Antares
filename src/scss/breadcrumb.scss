@@ -1,0 +1,37 @@
+.breadcrumb {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+
+  line-height: 1.4em;
+
+
+
+  &__delimiter {
+    font-size: 18px !important;
+    cursor: default;
+
+    @media (min-width: 420px) {
+      font-size: 13px !important;
+    }
+  }
+
+  &__link {
+    display: contents;
+    color: #000000;
+    height: 1em;
+
+    font-size: 18px;
+
+    @media (max-width: 1024px) {
+        font-size: 16px;
+      }
+
+      @media (max-width: 420px) {
+        gap: 2px;
+        font-size: 14px;
+      }
+  }
+
+
+}

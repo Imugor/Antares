@@ -1,0 +1,145 @@
+.news {
+  padding: 20px 0 60px 0;
+  &__news-content {
+  }
+}
+.news-content {
+  &__breadcrumb {
+    margin-bottom: 14px;
+  }
+
+  &__title {
+    margin-bottom: 30px;
+    @media (max-width: 420px) {
+      margin-bottom: 20px;
+    }
+  }
+
+  &__news-list {
+  }
+
+  &__teg-select {
+    margin-bottom: 15px;
+  }
+}
+.news-list {
+  display: flex;
+  flex-direction: column;
+  gap: 70px;
+
+  @media (max-width: 420px) {
+    gap: 20px;
+  }
+
+  &__news-cell {
+  }
+}
+
+.teg-select {
+  display: flex;
+  justify-content: flex-end;
+
+  &__teg-select-list {
+    width: 240px;
+
+    @media (max-width: 420px) {
+      width: 100%;
+
+      .select-list__title {
+        width: auto;
+      }
+    }
+  }
+}
+
+.news-cell {
+  display: flex;
+  flex-direction: column;
+  &__link {
+    @media (max-width: 420px) {
+      &:nth-child(1) {
+        order: 0;
+      }
+      &:nth-child(2) {
+        order: 2;
+      }
+      &:nth-child(3) {
+        order: 1;
+      }
+    }
+  }
+
+  &__img {
+    width: 100%;
+    height: 185px;
+    border-radius: 10px;
+    object-fit: cover;
+    @media (max-width: 420px) {
+    }
+  }
+
+  &__title {
+    margin: 40px 0 16px 0;
+    color: #000000;
+    font-family: Inter-bold;
+    font-size: 36px;
+
+    @media (max-width: 1024px) {
+      font-size: 30px;
+    }
+
+    @media (max-width: 420px) {
+      margin: 5px 0;
+
+      font-size: 14px;
+    }
+  }
+
+  &__news-atribute {
+  }
+
+  &__text {
+    @media (max-width: 420px) {
+      order: 3;
+      font-size: 14px;
+    }
+  }
+}
+.news-atribute {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 30px;
+  margin-bottom: 24px;
+
+  @media (max-width: 420px) {
+    justify-content: space-between;
+    margin: 5px 0;
+    gap: 10px;
+    font-size: 10px;
+  }
+  &__teg {
+    padding: 8px 16px;
+    border-radius: 10px;
+    background: #e6e6e6;
+    @media (max-width: 420px) {
+      margin-top: -5px;
+      font-size: 12px;
+      order: 3;
+    }
+  }
+
+  &__date {
+  }
+
+  &__time-to-read {
+    display: flex;
+    align-items: center;
+  }
+}
+.head-of-article {
+  &__time-to-read {
+    &_bold {
+    }
+  }
+}

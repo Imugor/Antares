@@ -1,0 +1,35 @@
+.company-info-text {
+  padding: 60px 0;
+
+  @media (max-width: 420px) {
+    padding: 20px 24px;
+  }
+
+  & h3 {
+    font-family: Inter-bold;
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 1.2em;
+    @media (max-width: 1024px) {
+      font-size: 28px;
+    }
+    @media (max-width: 420px) {
+      font-size: 18px;
+    }
+  }
+
+  & p {
+    padding: 15px 0 29px 0;
+    font-size: 24px;
+    line-height: 1.4em;
+    text-align: justify;
+    @media (max-width: 1024px) {
+      font-size: 20px;
+    }
+
+    @media (max-width: 420px) {
+      font-size: 16px;
+    }
+  }
+
+}

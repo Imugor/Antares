@@ -1,0 +1,389 @@
+@import "reset";
+@import "fonts";
+@import "swiper";
+
+$red: #e74f42;
+
+:root {
+  scroll-behavior: smooth;
+}
+
+body {
+  min-height: 100%;
+  font-family: Inter;
+  overflow-x: hidden;
+}
+
+.blocked {
+  overflow: hidden;
+}
+
+a {
+  text-decoration: none;
+}
+
+.pop-up {
+  display: none;
+}
+
+.wrapper {
+  //   overflow: hidden;
+  width: 1200px;
+  margin: 0 auto;
+
+  @media (max-width: 1024px) {
+    width: 900px;
+  }
+
+  @media (max-width: 420px) {
+    width: 312px;
+  }
+}
+
+.no-wrapper {
+  position: relative;
+  //   overflow: hidden;
+}
+
+.button {
+  border: none;
+  border-radius: 5px;
+
+  font-size: 20px;
+  color: #ffffff;
+  background-color: #e74f42;
+
+  cursor: pointer;
+  transition: all 0.3s ease;
+
+  &:hover {
+    background-color: #cc3b31;
+    transition: all 0.3s ease;
+  }
+}
+
+.button-nav {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 4px;
+  box-sizing: border-box;
+  color: #fff;
+  border: transparent 1px solid;
+  border-radius: 50%;
+
+  transition: 0.3s;
+
+  & i {
+    height: 20px;
+    width: 20px;
+    padding: 5px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #33363f;
+  }
+
+  @media (min-width: 421px) {
+    &:hover {
+      border: $red 1px solid;
+
+      & i {
+        background-color: $red;
+      }
+    }
+  }
+  @media (max-width: 420px) {
+    &:active {
+      border: $red 1px solid;
+
+      & i {
+        background-color: $red;
+      }
+    }
+  }
+
+  &__content {
+    width: 30px;
+    height: 30px;
+
+    border-radius: 50%;
+    background-color: #33363f;
+
+    transition: 0.3s;
+
+    &::after,
+    &::before {
+      position: absolute;
+      content: "";
+
+      top: 50%;
+      left: 0;
+
+      width: 13px;
+      height: 3px;
+
+      border-radius: 20px;
+      background-color: #ffffff;
+    }
+
+
+  }
+
+  &__next {
+    position: relative;
+    &::after,
+    &::before {
+      transform: translate(75%, -170%) rotate(45deg);
+    }
+
+    &::after {
+      transform: translate(75%, 80%) rotate(-45deg);
+    }
+  }
+
+  &__prev {
+    position: relative;
+    &::after,
+    &::before {
+      transform: translate(55%, -170%) rotate(-45deg);
+    }
+
+    &::after {
+      transform: translate(55%, 80%) rotate(45deg);
+    }
+  }
+
+  &:hover .button-nav__content {
+    background-color: $red;
+  }
+}
+
+.scroll-button {
+  position: fixed;
+  bottom: 8%;
+  left: 3%;
+
+  z-index: 10;
+
+  visibility: hidden;
+
+  opacity: 0;
+
+  width: 56px !important;
+  height: 56px !important;
+
+  transition: all 0.5s ease;
+
+  cursor: pointer;
+
+  @media (max-width: 420px) {
+    display: none;
+  }
+
+  &.active {
+    visibility: visible;
+    opacity: 1;
+  }
+
+  &__content {
+    width: 46px;
+    height: 46px;
+
+    border-radius: 50%;
+
+    background-color: #ff5b55;
+
+    transition: all 1s ease;
+
+    &::after,
+    &::before {
+      position: absolute;
+      content: "";
+
+      top: 50%;
+      left: 0;
+
+      width: 21px;
+      height: 6px;
+
+      border-radius: 10px;
+
+      background-color: #ffffff;
+
+      transform: translate(50%, -70%) rotate(-45deg);
+    }
+
+    &::after {
+      transform: translate(105%, -70%) rotate(45deg);
+    }
+  }
+}
+
+.title {
+  color: #000;
+  text-align: center;
+  font-family: Inter-bold;
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 1.2em;
+
+  @media (max-width: 1024px) {
+    font-size: 26px;
+  }
+
+  @media (max-width: 420px) {
+    font-size: 18px;
+  }
+}
+
+.phone-box {
+  display: flex;
+  align-items: center;
+
+  &__phone {
+    margin: 0 20px 0 12px;
+  }
+}
+
+.social-box {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+
+  @media (max-width: 420px) {
+    text-align: center;
+  }
+
+  &__text {
+  }
+
+  &__flex {
+    display: flex;
+    gap: 25px;
+
+    width: 100%;
+
+    @media (max-width: 420px) {
+      justify-content: center;
+    }
+  }
+
+  &__item {
+    svg {
+      color: #ffffff;
+    }
+  }
+}
+
+.email-box {
+  display: flex;
+  align-items: center;
+
+  &__email {
+    margin: 0 20px 0 12px;
+  }
+}
+
+.inputbox {
+  position: relative;
+
+  &__error {
+    position: absolute;
+
+    display: none;
+
+    top: 100%;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    margin-top: 6px;
+
+    text-align: left;
+
+    color: #ff5555;
+  }
+
+  &_error .inputbox__error {
+    display: block;
+  }
+
+  &_error input {
+    display: block;
+    border: 1px solid #ff5555 !important;
+  }
+}
+
+.stars {
+  & svg {
+    width: 29px !important;
+    height: 29px !important;
+    fill: #c7c3be;
+
+    @media (max-width: 1024px) {
+      width: 24px !important;
+      height: 24px !important;
+    }
+    @media (max-width: 420px) {
+      width: 14px !important;
+      height: 14px !important;
+    }
+  }
+}
+
+.swiper-pagination-bullet {
+  width: var(--swiper-pagination-bullet-width, var(--swiper-pagination-bullet-size, 8px));
+  height: var(--swiper-pagination-bullet-height, var(--swiper-pagination-bullet-size, 8px));
+  display: inline-block;
+  border-radius: var(--swiper-pagination-bullet-border-radius, 50%);
+  background: #bdbdbd;
+  opacity: 1;
+
+  @at-root button#{&} {
+    border: none;
+    margin: 0;
+    padding: 0;
+    box-shadow: none;
+    appearance: none;
+  }
+}
+.swiper-pagination-bullet-active {
+  background: $red;
+  transform: scale(1.285713);
+}
+
+@import "header";
+@import "main-banner";
+@import "about";
+@import "popular-category";
+@import "stocks";
+@import "projects";
+@import "reviews";
+@import "partners";
+@import "feedback";
+@import "footer";
+@import "company";
+@import "article";
+@import "article-list";
+@import "head-of-page";
+@import "head-of-article";
+@import "partners-list";
+@import "stocks-list";
+@import "vacancies";
+@import "news";
+@import "reviews-list";
+@import "avards";
+@import "add-review";
+@import "catalog";
+@import "contact";
+@import "category";
+@import "item";
+@import "breadcrumb";
+@import "pop-up";
+@import "order";
+@import "response";

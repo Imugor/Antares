@@ -1,0 +1,191 @@
+<html lang="ru">
+
+<head>
+  @@include('html/_head.html', {
+  'title': 'Каталог',
+  'description': '',
+  'keywords': '',
+  'robots': 'index, nofolow',
+  'generator': ''
+  })
+</head>
+
+<body>
+  @@include('html/_header.html')
+  <section class="category">
+    <div class="wrapper">
+      <div class="category__category-content category-content">
+        <div class="category-content__breadcrumb">
+          @@include('html/_breadcrumbs.html')
+        </div>
+        <h2 class="category-content__title title">Каталог товаров</h2>
+        <div class="category-content__category-list category-list">
+
+          <form class="category-list__category-aside category-aside">
+            <div class="category-aside__wrapper">
+              <p class="category-aside__close">Напольные покрытия</p>
+              <input type="hidden" name="typeForm" value="settingsCategory">
+              <div class="category-aside__category-settings category-settings">
+                <h3 class="category-settings__title">Тип</h3>
+                <div class="category-settings__select-list select-list">
+                  <h3 class="select-list__title">Все</h3>
+                  <input class="select-list__form-input" type="hidden" name="typeItem">
+                  <div class="select-list__content">
+                    <input type="radio" class="select-list__select-input" id="0">
+                    <label for="0" class="select-list__select-label">Уфа</label>
+                    <input type="radio" class="select-list__select-input" id="1">
+                    <label for="1" class="select-list__select-label">Ижевск</label>
+                    <input type="radio" class="select-list__select-input" id="2">
+                    <label for="2" class="select-list__select-label">Санкт-Петербург</label>
+                  </div>
+                </div>
+              </div>
+              <div class="category-aside__category-settings category-settings">
+                <h3 class="category-settings__title">Цвет</h3>
+                <div class="category-settings__select-list select-list">
+                  <h3 class="select-list__title">Все</h3>
+                  <input class="select-list__form-input" type="hidden" name="color">
+                  <div class="select-list__content">
+                    <input type="radio" class="select-list__select-input" id="0">
+                    <label for="0" class="select-list__select-label">Черный</label>
+                    <input type="radio" class="select-list__select-input" id="1">
+                    <label for="1" class="select-list__select-label">Желтый</label>
+                    <input type="radio" class="select-list__select-input" id="2">
+                    <label for="2" class="select-list__select-label">Санкт-Петербург</label>
+                  </div>
+                </div>
+              </div>
+              <div class="category-aside__category-settings category-settings">
+                <h3 class="category-settings__title">Цена ₽</h3>
+                <div class="category-settings__price_low category-settings__price">
+                  <p>от:</p><input type="text" placeholder="1000" name="lowPrice">
+                </div>
+                <div class="category-settings__price_hight category-settings__price">
+                  <p>от:</p><input type="text" placeholder="10000" name="hightPrice">
+                </div>
+              </div>
+              <div class="category-aside__category-settings category-settings">
+                <h3 class="category-settings__title">Способ получения</h3>
+                <div class="category-settings__choose">
+                  <div class="category-settings__radio">
+                    <input type="radio" name="obtaining" id="obtaining1">
+                    <label for="obtaining1">Доставка</label>
+                  </div>
+                  <div class="category-settings__radio">
+                    <input type="radio" name="obtaining" id="obtaining2">
+                    <label for="obtaining2">Самовывоз</label>
+                  </div>
+                </div>
+              </div>
+              <div class="category-aside__category-settings category-settings">
+                <h3 class="category-settings__title">Характеристика</h3>
+                <div class="category-settings__choose">
+                  <div class="category-settings__checkbox">
+                    <input type="checkbox" name="char" id="char1">
+                    <label for="char1">Крутой</label>
+                  </div>
+                  <div class="category-settings__checkbox">
+                    <input type="checkbox" name="char" id="char2">
+                    <label for="char2">Средний</label>
+                  </div>
+                </div>
+              </div>
+              <input type="submit" class="category-aside__submit button" value="Применить">
+            </div>
+          </form>
+          <div class="category-list__category-list-content category-list-content">
+            <form class="category-list__category-top-settings category-top-settings">
+              <p class="category-top-settings__count">Кол-во товаров:</p>
+              <p class="category-top-settings__filtr">Фильтр</p>
+              <div class="category-top-settings__select-list select-list">
+                <h3 class="select-list__title">Рекомендуемые</h3>
+                <div class="select-list__content">
+                  <input type="radio" class="select-list__select-input" id="0" value="let">
+                  <label for="0" class="select-list__select-label">Рекомендуемые</label>
+                  <input type="radio" class="select-list__select-input" id="1" value="lt">
+                  <label for="1" class="select-list__select-label">Популярные</label>
+                  <input type="radio" class="select-list__select-input" id="2" value="et">
+                  <label for="2" class="select-list__select-label">Сначала дешевые</label>
+                </div>
+              </div>
+            </form>
+            <p class="category-top-settings__count category-top-settings__count_mobile">Кол-во товаров:</p>
+            <div class="category-list-content__grid">
+            <div class="category-list-content__category-cell category-cell">
+              <a href="" class="catalog-cell__link"><img src="@img/pocritie.jpg" alt="Покрытие напольное"
+                  class="category-cell__img"></a>
+              <div class="category-cell__flex-element flex-element">
+                <div class="flex-element__top">
+                <a href="" class="catalog-cell__link">
+                  <p class="category-cell__articul">Арт: 123456789</p>
+                </a>
+                <a href="" class="catalog-cell__link">
+                  <p class="category-cell__name" data-item="name">Покрытие</p>
+                </a>
+              </div>
+              <div class="flex-element__bottom">
+                <button class="category-cell__button button pop-up-start" data-popUp="order">Заказать
+                </button>
+              </div>
+              </div>
+            </div>
+            <div class="category-list-content__category-cell category-cell">
+              <a href="" class="catalog-cell__link"><img src="@img/pocritie.jpg" alt="Покрытие напольное"
+                  class="category-cell__img"></a>
+              <div class="category-cell__flex-element flex-element">
+                <div class="flex-element__top">
+                <a href="" class="catalog-cell__link">
+                  <p class="category-cell__articul">Арт: 123456789</p>
+                </a>
+                <a href="" class="catalog-cell__link">
+                  <p class="category-cell__name" data-item="name">Покрытие</p>
+                </a>
+              </div>
+              <div class="flex-element__bottom">
+                <button class="category-cell__button button pop-up-start" data-popUp="order">Заказать
+                </button>
+              </div>
+              </div>
+            </div>
+              <div class="category-list-content__category-cell category-cell">
+                <a href="" class="catalog-cell__link"><img src="@img/pocritie.jpg" alt="Покрытие напольное"
+                    class="category-cell__img"></a>
+                <div class="category-cell__flex-element flex-element">
+                  <div class="flex-element__top">
+                  <a href="" class="catalog-cell__link">
+                    <p class="category-cell__articul">Арт: 123456789</p>
+                  </a>
+                  <a href="" class="catalog-cell__link">
+                    <p class="category-cell__name" data-item="name">Покрытие</p>
+                  </a>
+                </div>
+                <div class="flex-element__bottom">
+                  <button class="category-cell__button button pop-up-start" data-popUp="order">Заказать
+                  </button>
+                </div>
+                </div>
+              </div>
+            </div>
+              <div class="category-list-content__category-pagination category-pagination">
+                <div class="category-pagination__arrow category-pagination__arrow_first"><a href=""></a></div>
+                <div class="category-pagination__arrow category-pagination__arrow_prev"><a href=""></a></div>
+                <div class="category-pagination__page">
+                  <a href="" class="category-pagination__link category-pagination__link_active">1</a>
+                  <a href="" class="category-pagination__link">2</a>
+                  <a href="" class="category-pagination__link">3</a>
+                </div>
+                <div class="category-pagination__arrow category-pagination__arrow_next"><a href=""></a></div>
+                <div class="category-pagination__arrow category-pagination__arrow_last"><a href=""></a></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  @@include('html/_footer.html')
+  <script src="js/DOMLoaded.js"></script>
+  <script defer src="js/script.js"></script>
+</body>
+
+</html>

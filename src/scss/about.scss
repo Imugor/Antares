@@ -1,0 +1,147 @@
+.about {
+  position: relative;
+
+  color: #000;
+
+  &__about-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .no-wrapper {
+    padding: 50px 0 50px 0;
+
+    @media (max-width: 420px) {
+      padding: 20px 0 50px 0;
+    }
+
+    &::after {
+      position: absolute;
+      z-index: -1;
+      content: "";
+      right: 0;
+      top: 0;
+      width: 550px;
+      height: 100%;
+      background-image: url(../img/about-right.png);
+      background-repeat: no-repeat;
+
+      @media (max-width: 420px) {
+        top: 15%;
+        width: 108px;
+        background-image: url(../img/mobila-about-right.png);
+      }
+    }
+
+    &::before {
+      position: absolute;
+      z-index: -1;
+      content: "";
+      top: 0;
+      left: 0;
+      width: 358px;
+      height: 100%;
+      background-image: url(../img/about-left.png);
+      background-repeat: no-repeat;
+
+      @media (max-width: 420px) {
+        top: 30%;
+        width: 96.5px;
+        background-image: url(../img/mobila-about-left.png);
+      }
+    }
+  }
+}
+.about-info {
+  &__title {
+  }
+
+  &__text {
+    margin: 20px 0 49px 0;
+    max-width: 700px;
+
+    text-align: center;
+    font-size: 32px;
+    line-height: 1.4em;
+
+    &_bold {
+      font-family: Inter-bold;
+      line-height: 1.4em;
+      @media (max-width: 420px) {
+        font-family: Inter;
+      }
+    }
+
+    @media (max-width: 1024px) {
+      font-size: 26px;
+    }
+
+    @media (max-width: 420px) {
+      max-width: 276px;
+      font-size: 14px;
+    }
+  }
+
+  &__statistics {
+  }
+}
+.statistics {
+  //   display: flex;
+  //   justify-content: space-between;
+  //   gap: 100px;
+  @media (max-width: 1024px) {
+    // gap: 60px;
+  }
+
+  &__wrapper {
+    width: 1100px;
+    padding: 5px 5px;
+
+    @media (max-width: 420px) {
+      width: 250px;
+    }
+  }
+
+  &__slide {
+    max-width: 300px;
+  }
+
+  &__statistics-element {
+  }
+}
+.statistics-element {
+  padding: 23.5px 0;
+  max-width: 300px;
+  border-radius: 10px;
+
+  text-align: center;
+
+  box-shadow: 0 3px 5px 0 rgba($color: #000000, $alpha: 0.13);
+  background-color: #ffffff;
+
+  @media (max-width: 1024px) {
+    max-width: 250px;
+  }
+
+  &__title {
+    font-family: Inter-bold;
+    color: #e74f42;
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 1.2em;
+    @media (max-width: 1024px) {
+      font-size: 38px;
+    }
+  }
+
+  &__info {
+    padding: 0 15px;
+    color: #000;
+    font-size: 24px;
+    line-height: 1.4em;
+    @media (max-width: 1024px) {
+      font-size: 20px;
+    }
+  }
+}
